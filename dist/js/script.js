@@ -44,11 +44,11 @@ createItem.addEventListener("click", e => {
             if(item.title == deltext) {
                 diaryList.splice(index, 1);
             }
-            delitem.remove();
         });
         if(diaryList.length == 0) {
             downIcon.style.visibility = "hidden";
         }
+        delitem.remove();
     });
     let heading2 = document.createElement("h2");
     heading2.innerText = title.value;
@@ -122,11 +122,11 @@ function loadData() {
                     if(item.title == deltext) {
                         diaryList.splice(index, 1);
                     }
-                    delitem.remove();
                 });
                 if(diaryList.length == 0) {
                     downIcon.style.visibility = "hidden";
                 }
+                delitem.remove();
             });
             
             
