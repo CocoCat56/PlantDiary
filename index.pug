@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Plant Diary
+        link(rel="shortcut icon", href="./images/plant.ico")
+        link(rel="stylesheet", href="./css/reset.css")
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+    body 
+        .wrap 
+            section.diaryAdd
+                .diaryAddBG
+                .sun 
+                    img(src="./images/sun.svg", alt="sun")
+                .marginBottom 
+                    img(src="./images/margin.svg", alt="")
+                .headingOne 
+                    h1 Plant Diary
+                .addItem
+                    .items 
+                        .item 
+                            label 標題
+                            input(type="text" placeholder="植物名") 
+                        .item 
+                            label 日期 
+                            input(type="date")
+                        .item 
+                            label 照片
+                            input(type="text" placeholder="照片網址")
+                        .item.textareaDesc
+                            label 描述
+                            textarea(name="desc", rows="3",placeholder="相關描述")
+                        #createItem 加入
+                .downIcon(style="visibility:hidden;")
+                    i(class="fas fa-chevron-circle-down") 
+            section.diaryShow
+        script(type="text/javascript" src="./js/script.js")
