@@ -92,6 +92,7 @@ body {
 .diaryAdd .addItem .items #createItem {
   font-size: 1vw;
   margin-right: 5%;
+  margin-bottom: 20px;
   padding: 5px 10px;
   float: right;
   color: #555;
@@ -223,6 +224,11 @@ body {
   text-align: justify;
 }
 
+@media screen and (max-width: 1300px) {
+  .diaryAdd .addItem .items #createItem {
+    margin-bottom: 0;
+  }
+}
 @media screen and (max-width: 1200px) {
   .diaryShow .diaryItems {
     width: 90%;
