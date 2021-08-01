@@ -1,0 +1,408 @@
+@charset "UTF-8";
+body {
+  background-color: #836A5C;
+  font-family: "微軟正黑體";
+}
+
+.hidden {
+  display: none;
+}
+
+.diaryAdd {
+  position: relative;
+  padding-top: 5vw;
+  padding-bottom: 2vw;
+}
+.diaryAdd .diaryAddBG {
+  background-color: #F8F9ED;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+.diaryAdd .sun {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 9vw;
+}
+.diaryAdd .marginBottom {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  z-index: -1;
+}
+.diaryAdd .headingOne {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 4vw;
+}
+.diaryAdd .headingOne h1 {
+  font-size: 2.5vw;
+  color: #707070;
+  font-weight: bold;
+}
+.diaryAdd .addItem {
+  margin: 0 auto;
+  width: 27vw;
+  height: 32vw;
+  background-image: url("../images/plant.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.diaryAdd .addItem .items {
+  margin-bottom: 1vw;
+  padding: 1vw;
+}
+.diaryAdd .addItem .items .textareaDesc {
+  display: flex;
+}
+.diaryAdd .addItem .items .item {
+  margin: 10px 0;
+  line-height: 1.5;
+  padding-left: 10px;
+}
+.diaryAdd .addItem .items .item label {
+  color: #fff;
+  font-size: 1.1vw;
+  margin-right: 10px;
+}
+.diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+  font-size: 1vw;
+  border: none;
+  border-radius: 3px;
+  outline-color: #707070;
+  padding: 5px;
+}
+.diaryAdd .addItem .items .item input {
+  width: 70%;
+}
+.diaryAdd .addItem .items .item textarea {
+  width: 70%;
+  resize: none;
+  margin-left: 5px;
+}
+.diaryAdd .addItem .items #createItem {
+  font-size: 1vw;
+  margin-right: 5%;
+  padding: 5px 10px;
+  float: right;
+  color: #555;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 2px 3px 5px #836A5C;
+  background-color: #F8F9ED;
+  font-weight: bold;
+}
+.diaryAdd .addItem .items #createItem:hover {
+  color: #F8F9ED;
+  background-color: #836A5C;
+}
+
+.downIcon {
+  width: 5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+.downIcon i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2.2vw;
+  color: #E1D3C0;
+  animation: jump 2.5s infinite;
+}
+
+@keyframes jump {
+  0% {
+    margin-top: 5px;
+    opacity: 1;
+  }
+  50% {
+    margin-top: -5px;
+    opacity: 0.5;
+  }
+  100% {
+    margin-top: 5px;
+    opacity: 0.8;
+  }
+}
+.diaryShow {
+  background-color: #836A5C;
+}
+.diaryShow .diaryItems {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6% 0;
+}
+.diaryShow .diaryItems .diaryItem {
+  width: 20%;
+  margin: 0 0 5% 4%;
+  padding: 10px 0;
+  background-color: #F8F9ED;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #555;
+  position: relative;
+}
+.diaryShow .diaryItems .diaryItem .delItem {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 3px;
+  background-color: rgba(131, 106, 92, 0.5);
+  cursor: pointer;
+}
+.diaryShow .diaryItems .diaryItem .delItem:before, .diaryShow .diaryItems .diaryItem .delItem:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  content: "";
+  width: 25px;
+  height: 5px;
+  background-color: #F8F9ED;
+}
+.diaryShow .diaryItems .diaryItem .delItem:after {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.diaryShow .diaryItems .diaryItem .delItem:hover {
+  background-color: #F8F9ED;
+}
+.diaryShow .diaryItems .diaryItem .delItem:hover:before, .diaryShow .diaryItems .diaryItem .delItem:hover:after {
+  background-color: #836A5C;
+}
+.diaryShow .diaryItems .diaryItem img, .diaryShow .diaryItems .diaryItem p, .diaryShow .diaryItems .diaryItem h2 {
+  width: 90%;
+}
+.diaryShow .diaryItems .diaryItem img {
+  margin: 0 auto;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.diaryShow .diaryItems .diaryItem h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+.diaryShow .diaryItems .diaryItem p.diaryDate {
+  position: absolute;
+  bottom: -5px;
+  right: 0px;
+  margin: 10px;
+  text-align: right;
+  font-size: 14px;
+}
+.diaryShow .diaryItems .diaryItem p.diaryDate span {
+  font-weight: bold;
+}
+.diaryShow .diaryItems .diaryItem p.diaryDate i {
+  margin-right: 5px;
+}
+.diaryShow .diaryItems .diaryItem p.diaryDesc {
+  margin: 10px 0 25px 0;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1200px) {
+  .diaryShow .diaryItems {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .diaryAdd .addItem {
+    width: 32vw;
+    height: 36vw;
+  }
+
+  .downIcon i {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .diaryAdd .addItem {
+    width: 37vw;
+    height: 42vw;
+  }
+  .diaryAdd .addItem .items .item {
+    padding-left: 8px;
+  }
+  .diaryAdd .addItem .items .item label, .diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+    font-size: 1.5vw;
+  }
+  .diaryAdd .addItem .items #createItem {
+    font-size: 1.5vw;
+  }
+
+  .diaryShow .diaryItems {
+    padding: 8% 0;
+  }
+  .diaryShow .diaryItems .diaryItem {
+    width: 28%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .diaryAdd .headingOne h1 {
+    font-size: 3vw;
+  }
+  .diaryAdd .addItem {
+    width: 41vw;
+    height: 46vw;
+  }
+  .diaryAdd .addItem .items .item label, .diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+    font-size: 1.6vw;
+  }
+  .diaryAdd .addItem .items #createItem {
+    font-size: 1.6vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .diaryAdd .headingOne h1 {
+    font-size: 3.2vw;
+  }
+  .diaryAdd .addItem {
+    width: 45vw;
+    height: 51vw;
+  }
+  .diaryAdd .addItem .items .item label, .diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+    font-size: 1.8vw;
+  }
+  .diaryAdd .addItem .items #createItem {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .diaryAdd .headingOne h1 {
+    font-size: 3.5vw;
+  }
+  .diaryAdd .addItem {
+    width: 52vw;
+    height: 60vw;
+  }
+  .diaryAdd .addItem .items .item label, .diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+    font-size: 2vw;
+  }
+  .diaryAdd .addItem .items #createItem {
+    font-size: 2vw;
+    margin-bottom: 2vw;
+  }
+  .diaryAdd .downIcon i {
+    font-size: 4vw;
+  }
+
+  .diaryShow .diaryItems {
+    padding: 10% 0;
+  }
+  .diaryShow .diaryItems .diaryItem {
+    width: 40%;
+    margin: 0 0 5% 6%;
+  }
+}
+@media screen and (max-width: 610px) {
+  .diaryAdd .headingOne h1 {
+    font-size: 4vw;
+  }
+  .diaryAdd .addItem {
+    width: 60vw;
+    height: 68vw;
+  }
+  .diaryAdd .addItem .items .item label, .diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+    font-size: 2.3vw;
+  }
+  .diaryAdd .addItem .items #createItem {
+    font-size: 2.3vw;
+  }
+}
+@media screen and (max-width: 535px) {
+  .diaryAdd .headingOne {
+    width: 50%;
+  }
+  .diaryAdd .headingOne h1 {
+    font-size: 4.5vw;
+  }
+  .diaryAdd .addItem {
+    width: 70vw;
+    height: 80vw;
+  }
+  .diaryAdd .addItem .items .item label, .diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+    font-size: 2.8vw;
+  }
+  .diaryAdd .addItem .items #createItem {
+    font-size: 2.8vw;
+  }
+  .diaryAdd .downIcon i {
+    font-size: 5.5vw;
+  }
+
+  .diaryShow .diaryItems {
+    padding: 14% 0;
+  }
+  .diaryShow .diaryItems .diaryItem {
+    margin: 0 0 8% 4%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .diaryShow .diaryItems .diaryItem {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+  }
+}
+@media screen and (max-width: 445px) {
+  .diaryAdd .headingOne h1 {
+    font-size: 5vw;
+  }
+  .diaryAdd .addItem {
+    width: 78vw;
+    height: 90vw;
+  }
+  .diaryAdd .addItem .items .item label, .diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+    font-size: 3vw;
+  }
+  .diaryAdd .addItem .items #createItem {
+    font-size: 3vw;
+  }
+
+  .diaryShow .diaryItems {
+    padding: 18% 0;
+  }
+}
+@media screen and (max-width: 390px) {
+  .diaryAdd .headingOne h1 {
+    font-size: 5.6vw;
+  }
+  .diaryAdd .addItem {
+    width: 90vw;
+    height: 110vw;
+  }
+  .diaryAdd .addItem .items .item label, .diaryAdd .addItem .items .item input, .diaryAdd .addItem .items .item textarea {
+    font-size: 3.6vw;
+  }
+  .diaryAdd .addItem .items #createItem {
+    font-size: 3.6vw;
+    margin-bottom: 20px;
+  }
+
+  .diaryShow .diaryItems {
+    padding: 22% 0;
+  }
+}

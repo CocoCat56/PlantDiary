@@ -1,0 +1,354 @@
+$color-light-yellow: #F8F9ED
+$color-dark-brown: #836A5C
+$color-meddle-brown: #B09D8D
+$color-light-brown: #E1D3C0
+$color-grey: #707070
+$color-white: #fff
+$color-black: #555
+body
+    background-color: $color-dark-brown
+    font-family: "微軟正黑體"
+.hidden
+    display: none
+.diaryAdd
+    position: relative
+    padding-top: 5vw
+    padding-bottom: 2vw
+    .diaryAddBG
+        background-color: $color-light-yellow
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        z-index: -2
+    .sun
+        position: absolute
+        left: 20px
+        top: 20px
+        width: 9vw
+    .marginBottom
+        position: absolute
+        left: 0
+        bottom: -5px
+        width: 100%
+        z-index: -1
+    .headingOne
+        width: 30%
+        margin: 0 auto
+        text-align: center
+        margin-bottom: 4vw
+        h1
+            font-size: 2.5vw
+            color: $color-grey
+            font-weight: bold
+    .addItem
+        margin: 0 auto
+        width: 27vw
+        height: 32vw
+        background-image: url("../images/plant.svg")
+        background-repeat: no-repeat
+        background-size: cover
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        .items
+            margin-bottom: 1vw
+            padding: 1vw
+            .textareaDesc
+                display: flex
+            .item
+                margin: 10px 0
+                line-height: 1.5
+                padding-left: 10px
+                label
+                    color: $color-white
+                    font-size: 1.1vw
+                    margin-right: 10px
+                input, textarea
+                    font-size: 1vw
+                    border: none
+                    border-radius: 3px
+                    outline-color: $color-grey
+                    padding: 5px
+                input
+                    width: 70%
+                textarea
+                    width: 70%
+                    resize: none
+                    margin-left: 5px
+            #createItem
+                font-size: 1vw
+                margin-right: 5%
+                padding: 5px 10px
+                float: right
+                color: $color-black
+                cursor: pointer
+                border-radius: 3px
+                box-shadow: 2px 3px 5px $color-dark-brown
+                background-color: $color-light-yellow
+                font-weight: bold
+                &:hover
+                    color: $color-light-yellow
+                    background-color: $color-dark-brown
+
+
+.downIcon
+    width: 5%
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    margin-top: 20px
+    position: relative
+    i
+        position: absolute
+        top: 0
+        left: 0
+        font-size: 2.2vw
+        color:  $color-light-brown
+        animation: jump 2.5s infinite
+@keyframes jump
+    0%
+        margin-top: 5px
+        opacity: 1
+    50%
+        margin-top: -5px
+        opacity: 0.5
+    100%
+        margin-top: 5px
+        opacity: 0.8
+
+.diaryShow
+    background-color: $color-dark-brown
+    .diaryItems
+        width: 75%
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        padding: 6% 0
+        .diaryItem
+            width: 20%
+            margin: 0 0 5% 4%
+            padding: 10px 0
+            background-color: $color-light-yellow
+            display: flex
+            flex-direction: column
+            align-items: center
+            border-radius: 3px 
+            line-height: 1.2
+            letter-spacing: 1px
+            color: $color-black
+            position: relative
+            .delItem
+                position: absolute
+                top: 0
+                right: 0
+                width: 30px
+                height: 30px
+                border-top-right-radius: 3px
+                background-color: rgba($color-dark-brown, 0.5)
+                cursor: pointer
+                &:before, &:after
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%) rotate(45deg)
+                    content: ""
+                    width: 25px
+                    height: 5px
+                    background-color: $color-light-yellow
+                &:after
+                    transform: translate(-50%, -50%) rotate(135deg)  
+                &:hover
+                    background-color: $color-light-yellow
+                    &:before, &:after
+                        background-color: $color-dark-brown                        
+                    
+            img, p, h2
+                width: 90%
+            img
+                margin: 0 auto
+                height: 180px
+                object-fit: cover
+                border-radius: 3px
+            h2
+                font-size: 18px
+                font-weight: bold
+                margin: 10px 0 5px 0
+            p.diaryDate
+                position: absolute
+                bottom: -5px
+                right: 0px
+                margin: 10px
+                text-align: right
+                font-size: 14px
+                span
+                    font-weight: bold
+                i
+                    margin-right: 5px
+            p.diaryDesc
+                margin: 10px 0 25px 0
+                text-align: justify
+
+@media screen and ( max-width: 1200px )
+    .diaryShow
+        .diaryItems
+            width: 90%
+@media screen and ( max-width: 1100px )
+    .diaryAdd
+        .addItem
+            width: 32vw
+            height: 36vw
+    .downIcon
+        i
+            font-size: 3vw
+@media screen and ( max-width: 992px )
+    .diaryAdd
+        .addItem
+            width: 37vw
+            height: 42vw
+            .items
+                .item
+                    padding-left: 8px
+                    label, input, textarea
+                        font-size: 1.5vw
+                #createItem
+                    font-size: 1.5vw
+    .diaryShow
+        .diaryItems
+            padding: 8% 0
+            .diaryItem
+                width: 28%
+@media screen and ( max-width: 900px )
+    .diaryAdd
+        .headingOne
+            h1
+                font-size: 3vw
+        .addItem
+            width: 41vw
+            height: 46vw
+            .items
+                .item
+                    label, input, textarea
+                        font-size: 1.6vw
+                #createItem
+                    font-size: 1.6vw
+@media screen and ( max-width: 768px )
+    .diaryAdd
+        .headingOne
+            h1
+                font-size: 3.2vw
+        .addItem
+            width: 45vw
+            height: 51vw
+            .items
+                .item
+                    label, input, textarea
+                        font-size: 1.8vw
+                #createItem
+                    font-size: 1.8vw
+@media screen and ( max-width: 680px )
+    .diaryAdd
+        .headingOne
+            h1
+                font-size: 3.5vw
+        .addItem
+            width: 52vw
+            height: 60vw
+            .items
+                .item
+                    label, input, textarea
+                        font-size: 2vw
+                #createItem
+                    font-size: 2vw
+                    margin-bottom: 2vw
+        .downIcon
+            i
+                font-size: 4vw
+    .diaryShow
+        .diaryItems
+            padding: 10% 0
+            .diaryItem
+                width: 40%
+                margin: 0 0 5% 6%
+@media screen and ( max-width: 610px )
+    .diaryAdd
+        .headingOne
+            h1
+                font-size: 4vw
+        .addItem
+            width: 60vw
+            height: 68vw
+            .items
+                .item
+                    label, input, textarea
+                        font-size: 2.3vw
+                #createItem
+                    font-size: 2.3vw
+@media screen and ( max-width: 535px )
+    .diaryAdd
+        .headingOne
+            width: 50%
+            h1
+                font-size: 4.5vw
+        .addItem
+            width: 70vw
+            height: 80vw
+            .items
+                .item
+                    label, input, textarea
+                        font-size: 2.8vw
+                #createItem
+                    font-size: 2.8vw
+        .downIcon
+            i
+                font-size: 5.5vw
+    .diaryShow
+        .diaryItems
+            padding: 14% 0
+            .diaryItem
+                margin: 0 0 8% 4%
+@media screen and ( max-width: 460px )
+    .diaryShow
+        .diaryItems
+            .diaryItem
+                width: 60%
+                margin: 0 auto
+                margin-bottom: 10%
+@media screen and ( max-width: 445px )
+    .diaryAdd
+        .headingOne
+            h1
+                font-size: 5vw
+        .addItem
+            width: 78vw
+            height: 90vw
+            .items
+                .item
+                    label, input, textarea
+                        font-size: 3vw
+                #createItem
+                    font-size: 3vw
+    .diaryShow
+        .diaryItems
+            padding: 18% 0
+@media screen and ( max-width: 390px )
+    .diaryAdd
+        .headingOne
+            h1
+                font-size: 5.6vw
+        .addItem
+            width: 90vw
+            height: 110vw
+            .items
+                .item
+                    label, input, textarea
+                        font-size: 3.6vw
+                #createItem
+                    font-size: 3.6vw
+                    margin-bottom: 20px
+    .diaryShow
+        .diaryItems
+            padding: 22% 0
+            .diaryItem
+
