@@ -4,4 +4,4 @@
 ◆ JavaScript 練習<br><br>
 ◆ 手刻 CSS 製作響應式網頁
 
-<a href="https://coco-works-plantdiary.netlify.app" target="_blank">Demo</a>
+<a href="https://coco-works-plantdiary.netlify.app">Demo</a>
