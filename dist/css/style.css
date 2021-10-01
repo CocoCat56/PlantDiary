@@ -224,6 +224,18 @@ body {
   text-align: justify;
 }
 
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  color: #f8cd55;
+}
+
 @media screen and (max-width: 1300px) {
   .diaryAdd .addItem .items #createItem {
     margin-bottom: 0;
